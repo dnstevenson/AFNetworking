@@ -184,12 +184,12 @@ static dispatch_queue_t image_request_operation_processing_queue() {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
 - (UIImage *)responseImage {
     if (!_responseImage && [self isFinished]) {
-        if ([[UIScreen mainScreen] scale] == 2.0) {
-            CGImageRef imageRef = [[UIImage imageWithData:self.responseData] CGImage];
-            self.responseImage = [UIImage imageWithCGImage:imageRef scale:2.0 orientation:UIImageOrientationUp];
-        } else {
+//        if ([[UIScreen mainScreen] scale] == 2.0) {
+//            CGImageRef imageRef = [[UIImage imageWithData:self.responseData] CGImage];
+//            self.responseImage = [UIImage imageWithCGImage:imageRef scale:2.0 orientation:UIImageOrientationUp];
+//        } else {
             self.responseImage = [UIImage imageWithData:self.responseData]; 
-        }
+//        }
     }
     
     return _responseImage;
