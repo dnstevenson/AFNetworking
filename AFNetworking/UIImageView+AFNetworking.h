@@ -68,6 +68,8 @@
                        success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image))success
                        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error))failure;
 
+- (void) setLocalImage:(UIImage *)inImage;
+
 - (void)cancelImageRequestOperation;
 
 @end
